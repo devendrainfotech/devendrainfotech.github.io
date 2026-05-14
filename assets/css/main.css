@@ -258,7 +258,6 @@ section {
     padding: 220px 0;
     position: relative;
     border-top: 1px solid var(--line);
-    contain: layout;
 }
 section:first-of-type {
     border-top: 0;
@@ -335,7 +334,7 @@ section:first-of-type {
 /* ---------- Hero ---------- */
 .hero {
     padding-top: 96px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -417,6 +416,8 @@ section:first-of-type {
 .hero-title .line {
     display: block;
     overflow: hidden;
+    padding-bottom: 0.15em;
+    margin-bottom: -0.15em;
 }
 .hero-title .char {
     display: inline-block;
@@ -454,6 +455,7 @@ section:first-of-type {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     flex-wrap: wrap;
+    align-items: center;
 }
 .specimen span {
     display: inline-flex;
@@ -593,19 +595,19 @@ section:first-of-type {
 .hero-dot {
     color: var(--accent);
 }
-.rotator .r-word {
+.rotator-host .r-word {
     display: inline-block;
     transition:
-        opacity 0.4s var(--ease),
-        transform 0.5s var(--ease);
+        opacity 0.5s var(--ease),
+        transform 0.6s var(--ease);
 }
-.rotator .r-word.out {
+.rotator-host .r-word.out {
     opacity: 0;
-    transform: translateY(-0.15em);
+    transform: translateY(-0.6em);
 }
-.rotator .r-word.in-anim {
+.rotator-host .r-word.in-anim {
     opacity: 0;
-    transform: translateY(0.15em);
+    transform: translateY(0.8em);
 }
 .rotator .cursor {
     display: inline-block;
@@ -1126,16 +1128,33 @@ section:first-of-type {
     display: grid;
     grid-template-columns: 100px 1fr 1fr 140px;
     gap: 32px;
-    padding: 32px 0;
+    padding: 32px 0 32px 12px;
     border-top: 1px solid var(--line);
     align-items: baseline;
-    transition: padding 0.3s var(--ease);
+    position: relative;
+    transition:
+        padding 0.4s var(--ease),
+        background 0.4s var(--ease);
 }
 .award-row:last-child {
     border-bottom: 1px solid var(--line);
 }
+.award-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.4s var(--ease);
+}
 .award-row:hover {
-    padding-left: 12px;
+    padding-left: 24px;
+    background: color-mix(in oklab, var(--bg-soft) 60%, transparent);
+}
+.award-row:hover::before {
+    width: 2px;
 }
 .award-row .year {
     font-family: var(--font-mono);
@@ -1158,6 +1177,10 @@ section:first-of-type {
     color: var(--fg-dim);
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    transition: color 0.3s var(--ease);
+}
+.award-row:hover .tag {
+    color: var(--accent);
 }
 
 /* ---------- Contact ---------- */
@@ -1167,7 +1190,7 @@ section:first-of-type {
 .contact-big {
     font-family: var(--font-sans);
     font-weight: 500;
-    font-size: clamp(48px, 7.5vw, 128px);
+    font-size: clamp(48px, 7.5vw, 72px);
     line-height: 1;
     letter-spacing: -0.04em;
     margin-bottom: 100px;
@@ -1308,17 +1331,56 @@ section:first-of-type {
     transition-delay: 0.4s;
 }
 
+/* ---------- Scroll-hint col (desktop right-aligned, mobile left-aligned) ---------- */
+.col--right {
+    align-items: flex-end;
+    text-align: right;
+}
+.scroll-p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
     section {
-        padding: 120px 0;
+        padding: 64px 0;
+    }
+    section .wrap {
+        margin-bottom: 24px;
     }
     .hero-top {
         grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 0;
+        position: relative;
+        min-height: 280px;
+    }
+    .hero-text {
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+    .xhair {
+        display: none;
     }
     .portrait-slot {
-        width: 180px;
-        height: 240px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 65%;
+        height: 100%;
+        border: none;
+        background: none;
+        justify-self: unset;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 55%);
+        mask-image: linear-gradient(to right, transparent 0%, black 55%);
+    }
+    .portrait-slot .corner {
+        display: none;
     }
     .portrait-slot .initials {
         font-size: 100px;
@@ -1327,28 +1389,51 @@ section:first-of-type {
         grid-template-columns: 1fr;
         gap: 24px;
     }
+    .hero-bottom .col--right {
+        display: none;
+    }
     .about-grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
     .about-grid + .about-grid {
-        margin-top: 80px;
+        margin-top: 48px;
+    }
+    .about-lead {
+        font-size: 24px;
+    }
+    .about-aside {
+        gap: 12px;
+    }
+    .about-aside .stat {
+        padding: 10px 0;
     }
     .section-intro {
         grid-template-columns: 1fr;
         gap: 28px;
     }
+    .section-head {
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 28px;
+        padding: 14px 0 16px;
+    }
     .side-label {
         position: static;
-        padding: 16px 0 16px 20px;
+        padding: 8px 0 8px 20px;
+    }
+    .side-label .hint,
+    .side-label .label {
+        display: none;
     }
     .skill-row {
-        grid-template-columns: 40px 1fr 50px;
+        grid-template-columns: 40px 1fr;
         gap: 12px;
         padding: 18px 0;
     }
     .skill-row .tools,
-    .skill-row .meter {
+    .skill-row .meter,
+    .skill-row .lvl {
         display: none;
     }
     .project-row {
@@ -1387,14 +1472,45 @@ section:first-of-type {
     .nav-links {
         display: none;
     }
+    .nav-right .mono {
+        display: none;
+    }
+    .specimen {
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        background: color-mix(in oklab, var(--bg) 70%, transparent);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 12px 14px;
+    }
+    .dot-sep {
+        display: none;
+    }
+    .contact-wrap {
+        padding: 40px 0 28px;
+    }
+    .hero-bottom {
+        padding-top: 28px;
+    }
     .contact-big {
         font-size: clamp(36px, 9vw, 80px);
+        margin-bottom: 48px;
     }
 }
 
 @media (max-width: 500px) {
     :root {
         --gutter: 16px;
+    }
+    section {
+        padding: 80px 0;
+    }
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 28px;
+    }
+    .hero-title {
+        font-size: clamp(28px, 8vw, 48px);
     }
     .contact-meta {
         grid-template-columns: 1fr;

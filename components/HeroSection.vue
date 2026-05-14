@@ -3,7 +3,7 @@
     <div>
       <div class="hero-top">
         <!-- Left column: status + title + specimen -->
-        <div>
+        <div class="hero-text">
           <div class="status-chip reveal">
             <span class="led" aria-hidden="true"></span>
             Open to opportunities · Ahmedabad, IN
@@ -17,7 +17,7 @@
             <h1 ref="titleRef" class="hero-title" data-split>
               Devendra Yadav<br>
               <em>full-stack</em> developer<br>
-              shipping in <span data-keep class="rotator-host">JavaScript</span><span data-keep class="hero-dot">.</span>
+              shipping in <span data-keep class="rotator-host">JavaScript</span>
             </h1>
           </div>
 
@@ -29,8 +29,6 @@
             <span>Ahmedabad, IN</span>
             <span class="dot-sep"></span>
             <span>AWS Certified</span>
-            <span class="dot-sep"></span>
-            <span>Open to <b>opportunities</b></span>
           </div>
         </div>
 
@@ -52,9 +50,9 @@
         <span class="mono">02 — Currently</span>
         <p>Senior engineer at Basis Worldwide — shipping Nuxt 4 frontends for CooperSurgical and building real-time data pipelines on AWS.</p>
       </div>
-      <div class="col reveal" style="align-items:flex-end; text-align:right;">
+      <div class="col reveal col--right">
         <span class="mono">Scroll</span>
-        <p style="display:flex; align-items:center; gap:8px; justify-content:flex-end;">
+        <p class="scroll-p">
           <span class="kbd">↓</span> or <span class="kbd">space</span>
         </p>
       </div>
@@ -137,16 +135,21 @@ function initRotator() {
   const words = ['JavaScript', 'TypeScript', 'Node.js', 'Nuxt', 'Vue', 'React']
   let i = 0
 
-  host.innerHTML = `<span class="r-word">${host.textContent}</span><span class="cursor" aria-hidden="true"></span>`
+  host.innerHTML = `<span class="r-word">${host.textContent}<span class="hero-dot">.</span></span><span class="cursor" aria-hidden="true"></span>`
   const wordEl = host.querySelector<HTMLElement>('.r-word')!
+  const textNode = wordEl.childNodes[0] as Text
 
   setInterval(() => {
     i = (i + 1) % words.length
     wordEl.classList.add('out')
     setTimeout(() => {
-      wordEl.textContent = words[i]
+      // Update only the text node — preserves the dot span inside r-word
+      textNode.textContent = words[i]
+      wordEl.style.transition = 'none'
       wordEl.classList.remove('out')
       wordEl.classList.add('in-anim')
+      void wordEl.offsetHeight
+      wordEl.style.transition = ''
       requestAnimationFrame(() => requestAnimationFrame(() => wordEl.classList.remove('in-anim')))
     }, 400)
   }, 2600)
