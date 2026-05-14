@@ -16,7 +16,7 @@
             <span class="xhair br" aria-hidden="true"></span>
             <h1 ref="titleRef" class="hero-title" data-split>
               Devendra Yadav<br>
-              <em>full-stack</em> developer<br>
+              <em class="text-orange">full-stack</em> developer<br>
               shipping in <span data-keep class="rotator-host">JavaScript</span>
             </h1>
           </div>
