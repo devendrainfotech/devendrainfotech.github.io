@@ -11,11 +11,17 @@
       />
       <div class="reveal">
         <p class="about-lead">
-          I'm a Senior Full-stack Engineer based in Ahmedabad with 9+ years shipping production software
-          across fertility healthcare, cybersecurity, trading, construction tech, and logistics.
-          Currently at Basis Worldwide, I lead <em>Nuxt 4 development</em> for CooperSurgical's fertility
-          brand portfolio, architect Terraform infrastructure on Azure and GCP, and build real-time
-          data pipelines. I care about clean APIs, maintainable code, and systems that work reliably under pressure.
+          Senior full-stack engineer, Ahmedabad. Nine years in, five industries deep:
+          healthcare, fintech, cybersecurity, trading, and logistics.
+        </p>
+        <p class="about-lead">
+          Currently at Basis Worldwide — <em>Nuxt 4</em> for CooperSurgical, <em>Terraform</em>
+          across Azure and GCP for an AI healthcare client, and a real-time <em>CDC pipeline</em>
+          for Panopto's enterprise video platform.
+        </p>
+        <p class="about-lead">
+          I build the boring layers that make products feel fast.
+          Database to design system. Whichever layer is on fire.
         </p>
       </div>
     </div>
