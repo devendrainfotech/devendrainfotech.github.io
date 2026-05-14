@@ -3,7 +3,7 @@
     <div>
       <div class="hero-top">
         <!-- Left column: status + title + specimen -->
-        <div>
+        <div class="hero-text">
           <div class="status-chip reveal">
             <span class="led" aria-hidden="true"></span>
             Open to opportunities · Ahmedabad, IN
