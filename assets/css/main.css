@@ -1348,6 +1348,9 @@ section:first-of-type {
     section {
         padding: 64px 0;
     }
+    section .wrap {
+        margin-bottom: 24px;
+    }
     .hero-top {
         grid-template-columns: 1fr;
         gap: 0;
@@ -1396,6 +1399,15 @@ section:first-of-type {
     .about-grid + .about-grid {
         margin-top: 48px;
     }
+    .about-lead {
+        font-size: 24px;
+    }
+    .about-aside {
+        gap: 12px;
+    }
+    .about-aside .stat {
+        padding: 10px 0;
+    }
     .section-intro {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -1408,7 +1420,7 @@ section:first-of-type {
     }
     .side-label {
         position: static;
-        padding: 16px 0 16px 20px;
+        padding: 8px 0 8px 20px;
     }
     .side-label .hint,
     .side-label .label {
@@ -1469,7 +1481,6 @@ section:first-of-type {
         background: color-mix(in oklab, var(--bg) 70%, transparent);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        border-radius: var(--radius);
         padding: 12px 14px;
     }
     .dot-sep {
@@ -1496,6 +1507,7 @@ section:first-of-type {
     }
     .hero {
         padding-top: 80px;
+        padding-bottom: 28px;
     }
     .hero-title {
         font-size: clamp(28px, 8vw, 48px);
