@@ -113,7 +113,8 @@ onMounted(() => {
             return
           }
           const span = document.createElement('span')
-          span.className = `char ${elem.tagName.toLowerCase() === 'em' ? 'italic' : ''}`
+          const extraClasses = [...elem.classList].filter(c => c !== 'italic').join(' ')
+          span.className = `char ${elem.tagName.toLowerCase() === 'em' ? 'italic' : ''} ${extraClasses}`.trim()
           span.style.animationDelay = `${0.04 * idx + 0.2}s`
           span.textContent = ch
           lineEl.appendChild(span)
@@ -132,7 +133,7 @@ function initRotator() {
   const host = document.querySelector<HTMLElement>('.rotator-host')
   if (!host) return
 
-  const words = ['JavaScript', 'TypeScript', 'Node.js', 'Nuxt', 'Vue', 'React']
+  const words = ['JavaScript', 'TypeScript', 'Node.js', 'Nuxt', 'Vue', 'React', 'NestJS', 'Next.js', 'Angular', 'GraphQL', 'Terraform', 'Docker', 'AWS']
   let i = 0
 
   host.innerHTML = `<span class="r-word">${host.textContent}<span class="hero-dot">.</span></span><span class="cursor" aria-hidden="true"></span>`
