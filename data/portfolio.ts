@@ -13,7 +13,7 @@ export const projects = [
   {
     num: '/ 01',
     title: 'CooperSurgical Fertility Brands',
-    desc: 'Lead Nuxt 4 engineer for three CooperSurgical fertility platforms — sperm bank, egg donation, and cryobank — serving thousands of patients and donors globally on AWS Elastic Beanstalk.',
+    desc: 'Lead Nuxt 4 engineer for three CooperSurgical fertility brands — California Cryobank (sperm bank), Donor Egg Bank, and NW Cryobank — running on AWS Elastic Beanstalk across 11 US donation locations.',
     year: '2024',
     href: 'https://spermbank.com',
     preview: 'COOPERSURGICAL',
@@ -45,7 +45,7 @@ export const projects = [
   {
     num: '/ 05',
     title: 'SIRP — Security Orchestration',
-    desc: 'Architected the Playbook Editor for an AI-native SOC platform — a graph-based no-code workflow builder enabling security teams to automate threat response, reducing manual workload by 90%.',
+    desc: 'Architected the Playbook Editor for SIRP\'s AI-native SOC platform — a graph-based, no-code workflow builder that\'s the core surface security teams use to automate threat response.',
     year: '2022',
     href: 'https://www.sirp.io',
     preview: 'SIRP',
@@ -119,7 +119,7 @@ export const testimonials = [
   {
     quote: 'Devendra was always working hard to find solutions and speak up during meetings to be both a <em>thought leader and a technical expert</em>. He continued to over-deliver in everything he touched. Devendra is an incredible asset to any team.',
     name: 'Ross McIlwaine',
-    role: 'Product Lead · onX | ex-Ragnar',
+    role: 'AI Product Lead · onX | ex-Ragnar',
     initials: 'RM',
   },
   {
@@ -131,14 +131,14 @@ export const testimonials = [
   {
     quote: 'Devendra always led by example. His dedication to his craft is <em>nothing short of inspiring</em>, and his ability to coach others is something that I\'ll miss. I\'m grateful to have worked with Devendra.',
     name: 'Deep Govani',
-    role: 'Frontend Engineer · Angular · Vue.js · AWS',
+    role: 'Turning Ideas into Interactive Experiences · Angular · Vue · AWS',
     initials: 'DG',
   },
 ] as const
 
 export const awards = [
   { year: '2025', title: 'AWS Certified Developer – Associate', org: 'Amazon Web Services', tag: 'Certification' },
-  { year: '2023', title: 'Excellence Team Player', org: 'ToxCore Solutions', tag: 'Award' },
+  { year: '2021', title: 'Excellence Team Player', org: 'ToxCore Solutions', tag: 'Award' },
   { year: '2021', title: '3+ Years Long-Service Recognition', org: 'ToxCore Solutions', tag: 'Award' },
   { year: '2015', title: '2nd Place — State-level Code-o-Crack', org: 'R.B. Technical Institute', tag: 'Competition' },
   { year: '2015', title: '1st Rank — College Semesters', org: 'Govt. MCA College, Ahmedabad', tag: 'Academic' },
