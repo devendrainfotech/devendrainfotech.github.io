@@ -8,8 +8,9 @@ let rafId = 0
 let resizeHandler: () => void
 let mouseMoveHandler: (e: MouseEvent) => void
 
-onMounted(() => {
-  const el = canvas.value
+onMounted(async () => {
+  await nextTick()
+  const el = (canvas.value ?? document.getElementById('dotGrid')) as HTMLCanvasElement | null
   if (!el) return
 
   const ctx = el.getContext('2d')!
@@ -36,13 +37,13 @@ onMounted(() => {
     mouse.x += (mouse.tx - mouse.x) * 0.12
     mouse.y += (mouse.ty - mouse.y) * 0.12
 
-    const spacing = 48
+    const spacing = 96
     const cols = Math.ceil(w / spacing) + 2
     const rows = Math.ceil(h / spacing) + 2
     const isDark = document.documentElement.getAttribute('data-theme') !== 'light'
     const base = isDark ? 'rgba(250,250,250,' : 'rgba(18,18,18,'
-    const radius = 1.2
-    const influence = 140
+    const radius = 1.8
+    const influence = 280
 
     for (let i = 0; i < cols; i++) {
       for (let j = 0; j < rows; j++) {
@@ -53,15 +54,15 @@ onMounted(() => {
         const d = Math.hypot(dx, dy)
         let ox = 0
         let oy = 0
-        let op = 0.14
+        let op = 0.22
         let r = radius
 
         if (d < influence) {
           const k = 1 - d / influence
-          op = 0.14 + k * 0.55
-          r = radius + k * 1.8
+          op = 0.22 + k * 0.55
+          r = radius + k * 3.5
           const ang = Math.atan2(dy, dx)
-          const push = k * 10
+          const push = k * 20
           ox = Math.cos(ang) * push
           oy = Math.sin(ang) * push
         }
