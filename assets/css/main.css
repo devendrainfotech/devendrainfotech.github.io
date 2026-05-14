@@ -441,6 +441,10 @@ section:first-of-type {
     letter-spacing: -0.02em;
 }
 
+.text-orange {
+    color: var(--accent);
+}
+
 /* Specimen strip */
 .specimen {
     display: flex;
