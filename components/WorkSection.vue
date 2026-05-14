@@ -6,7 +6,7 @@
       <SectionSideLabel
         num="04 / Work"
         label="Six things I shipped."
-        hint="A filtered slice — products with real users, not weekend experiments."
+        hint="Healthcare platforms, data pipelines, security tools, and logistics systems — all in production."
       />
       <div class="projects reveal-stagger">
         <ProjectRow v-for="project in projects" :key="project.num" :project="project" />

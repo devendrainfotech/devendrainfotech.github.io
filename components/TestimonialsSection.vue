@@ -6,7 +6,7 @@
       <SectionSideLabel
         num="07 / References"
         label="People I've worked with."
-        hint="Words from managers, designers, and founders who had to endure my PRs."
+        hint="LinkedIn recommendations from managers and teammates across Ragnar, Kavobits, and beyond."
       />
       <div class="testimonials-grid reveal-stagger">
         <TestimonialCard

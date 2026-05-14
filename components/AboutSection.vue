@@ -11,10 +11,11 @@
       />
       <div class="reveal">
         <p class="about-lead">
-          I'm a full-stack developer who writes JavaScript for a living — and often <em>for fun</em>.
-          Six years of shipping web apps, APIs, and the occasional CLI.
-          I care about clean interfaces, fast feedback loops, and systems that
-          stay simple as they grow.
+          I'm a Senior Full-stack Engineer based in Ahmedabad with 9+ years shipping production software
+          across fertility healthcare, cybersecurity, trading, construction tech, and logistics.
+          Currently at Basis Worldwide, I lead <em>Nuxt 4 development</em> for CooperSurgical's fertility
+          brand portfolio, architect Terraform infrastructure on Azure and GCP, and build real-time
+          data pipelines. I care about clean APIs, maintainable code, and systems that work reliably under pressure.
         </p>
       </div>
     </div>
@@ -38,11 +39,11 @@
 
 <script setup lang="ts">
 const stats = [
-  { label: 'Years shipping', value: '06' },
-  { label: 'Production deploys', value: '1,200+' },
+  { label: 'Years shipping', value: '09+' },
+  { label: 'Production projects', value: '20+' },
   { label: 'Primary language', value: 'TypeScript' },
-  { label: 'Favourite runtime', value: 'Node.js' },
-  { label: 'Open source repos', value: '34' },
-  { label: 'Coffees / week', value: 'Undisclosed' },
+  { label: 'Current stack', value: 'Nuxt 4 · AWS' },
+  { label: 'AWS Certified', value: 'Developer Assoc.' },
+  { label: 'Based in', value: 'Ahmedabad, IN' },
 ]
 </script>

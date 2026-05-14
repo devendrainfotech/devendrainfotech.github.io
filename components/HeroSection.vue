@@ -1,14 +1,12 @@
 <template>
   <section class="hero wrap" aria-label="Introduction">
-    <span class="hero-mono-bg" aria-hidden="true">Dy</span>
-
     <div>
       <div class="hero-top">
         <!-- Left column: status + title + specimen -->
         <div>
           <div class="status-chip reveal">
             <span class="led" aria-hidden="true"></span>
-            Available for work · Q3 '26
+            Open to opportunities · Ahmedabad, IN
           </div>
 
           <div class="hero-title-wrap">
@@ -19,28 +17,27 @@
             <h1 ref="titleRef" class="hero-title" data-split>
               Devendra Yadav<br>
               <em>full-stack</em> developer<br>
-              shipping in <span data-keep class="rotator-host">JavaScript</span>.
+              shipping in <span data-keep class="rotator-host">JavaScript</span><span data-keep class="hero-dot">.</span>
             </h1>
           </div>
 
           <div class="specimen reveal" aria-hidden="true">
-            <span><b>FIG. 01</b> Display specimen</span>
+            <span><b>DEV.</b> Devendra Yadav</span>
             <span class="dot-sep"></span>
-            <span>Inter Tight · 500</span>
+            <span>9+ yrs experience</span>
             <span class="dot-sep"></span>
-            <span>Set −3.5%</span>
+            <span>Ahmedabad, IN</span>
             <span class="dot-sep"></span>
-            <span>42 glyphs</span>
+            <span>AWS Certified</span>
             <span class="dot-sep"></span>
-            <span>Rev. <b>2026.04</b></span>
+            <span>Open to <b>opportunities</b></span>
           </div>
         </div>
 
-        <!-- Right column: portrait placeholder -->
-        <div class="portrait-slot reveal" role="img" aria-label="Portrait placeholder">
+        <!-- Right column: portrait -->
+        <div class="portrait-slot reveal" role="img" aria-label="Portrait of Devendra Yadav">
           <span class="corner" aria-hidden="true">DY · 01</span>
-          <span class="initials" aria-hidden="true">Dy</span>
-          <span class="label" aria-hidden="true">PORTRAIT · DROP IMAGE HERE</span>
+          <img src="/avatar.png" alt="Devendra Yadav" class="portrait-img" />
         </div>
       </div>
     </div>
@@ -49,11 +46,11 @@
     <div class="hero-bottom">
       <div class="col reveal">
         <span class="mono">01 — Intro</span>
-        <p>I build end-to-end products in JavaScript. <strong>From database schemas to pixel-tuned UIs</strong> — I enjoy every layer.</p>
+        <p>I build end-to-end products in JavaScript. <strong>From Terraform infrastructure to pixel-tuned UIs</strong> — I enjoy every layer.</p>
       </div>
       <div class="col reveal">
         <span class="mono">02 — Currently</span>
-        <p>Leading a small product team on developer tooling. Writing more TypeScript than I thought humanly possible.</p>
+        <p>Senior engineer at Basis Worldwide — shipping Nuxt 4 frontends for CooperSurgical and building real-time data pipelines on AWS.</p>
       </div>
       <div class="col reveal" style="align-items:flex-end; text-align:right;">
         <span class="mono">Scroll</span>
@@ -137,7 +134,7 @@ function initRotator() {
   const host = document.querySelector<HTMLElement>('.rotator-host')
   if (!host) return
 
-  const words = ['JavaScript', 'TypeScript', 'Node', 'React', 'systems']
+  const words = ['JavaScript', 'TypeScript', 'Node.js', 'Nuxt', 'Vue', 'React']
   let i = 0
 
   host.innerHTML = `<span class="r-word">${host.textContent}</span><span class="cursor" aria-hidden="true"></span>`

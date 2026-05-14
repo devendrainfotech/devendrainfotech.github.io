@@ -3,7 +3,7 @@
     <span class="sn">{{ skill.num }}</span>
     <span class="name">{{ skill.name }}</span>
     <span class="tools">{{ skill.tools }}</span>
-    <div class="meter" :aria-label="`Proficiency: ${skill.label}`">
+    <div class="meter" role="img" :aria-label="`Proficiency: ${skill.label}`">
       <span
         v-for="n in 5"
         :key="n"

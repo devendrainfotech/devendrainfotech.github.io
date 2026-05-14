@@ -1,35 +1,38 @@
 <template>
-  <canvas id="dotGrid" aria-hidden="true"></canvas>
+  <canvas ref="canvas" id="dotGrid" aria-hidden="true"></canvas>
 </template>
 
 <script setup lang="ts">
-onMounted(() => {
-  const canvas = document.getElementById('dotGrid') as HTMLCanvasElement
-  if (!canvas) return
+const canvas = ref<HTMLCanvasElement | null>(null)
+let rafId = 0
+let resizeHandler: () => void
+let mouseMoveHandler: (e: MouseEvent) => void
 
-  const ctx = canvas.getContext('2d')!
+onMounted(() => {
+  const el = canvas.value
+  if (!el) return
+
+  const ctx = el.getContext('2d')!
   let w = 0
   let h = 0
   const dpr = Math.min(window.devicePixelRatio || 1, 2)
   const mouse = { x: -9999, y: -9999, tx: -9999, ty: -9999 }
-  let rafId = 0
 
-  function resize() {
-    w = canvas.clientWidth = window.innerWidth
-    h = canvas.clientHeight = window.innerHeight
-    canvas.width = w * dpr
-    canvas.height = h * dpr
+  resizeHandler = () => {
+    w = window.innerWidth
+    h = window.innerHeight
+    el.width = w * dpr
+    el.height = h * dpr
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
   }
 
-  function onMouseMove(e: MouseEvent) {
+  mouseMoveHandler = (e: MouseEvent) => {
     mouse.tx = e.clientX
     mouse.ty = e.clientY
   }
 
   function draw() {
     ctx.clearRect(0, 0, w, h)
-    // Smooth mouse tracking
     mouse.x += (mouse.tx - mouse.x) * 0.12
     mouse.y += (mouse.ty - mouse.y) * 0.12
 
@@ -73,15 +76,15 @@ onMounted(() => {
     rafId = requestAnimationFrame(draw)
   }
 
-  resize()
-  window.addEventListener('resize', resize, { passive: true })
-  window.addEventListener('mousemove', onMouseMove, { passive: true })
+  resizeHandler()
+  window.addEventListener('resize', resizeHandler, { passive: true })
+  window.addEventListener('mousemove', mouseMoveHandler, { passive: true })
   rafId = requestAnimationFrame(draw)
+})
 
-  onUnmounted(() => {
-    cancelAnimationFrame(rafId)
-    window.removeEventListener('resize', resize)
-    window.removeEventListener('mousemove', onMouseMove)
-  })
+onUnmounted(() => {
+  cancelAnimationFrame(rafId)
+  window.removeEventListener('resize', resizeHandler)
+  window.removeEventListener('mousemove', mouseMoveHandler)
 })
 </script>

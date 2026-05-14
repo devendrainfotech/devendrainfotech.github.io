@@ -5,8 +5,8 @@
     <div class="section-intro">
       <SectionSideLabel
         num="06 / Notes"
-        label="Essays & field notes."
-        hint="Occasional writing on types, tools, and the weird corners of JavaScript."
+        label="Writing."
+        hint="Articles on Node.js, AI integration, and building production JavaScript systems."
       />
       <div class="writing-list reveal-stagger">
         <WritingCard v-for="article in writing" :key="article.title" :article="article" />

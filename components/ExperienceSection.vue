@@ -5,8 +5,8 @@
     <div class="section-intro">
       <SectionSideLabel
         num="05 / Timeline"
-        label="Where I've been hiding."
-        hint="Six years in startups and consulting, with one big rewrite I'm still proud of."
+        label="Where I've been."
+        hint="9 years across fertility healthcare, cybersecurity, fintech, construction tech, and logistics."
       />
       <div class="timeline reveal-stagger">
         <TimelineRow v-for="entry in experience" :key="entry.when" :entry="entry" />
