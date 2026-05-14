@@ -23,7 +23,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://devendrainfotech.github.io',
-    name: 'Devendra Yadav — Full-stack JavaScript Developer',
+    name: 'Devendra Yadav — Senior Full-stack Engineer',
   },
 
   sitemap: {
