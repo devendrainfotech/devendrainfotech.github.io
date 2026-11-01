@@ -45,15 +45,20 @@ plugins/
 
 pages/
   index.vue        root page + SEO meta tags + JSON-LD schema
+  resume.vue       auto-generated résumé page (built from data/portfolio.ts)
 
 .github/workflows/
   deploy.yml       CI/CD — generates static site and deploys to GitHub Pages
+
+scripts/
+  generate-resume-pdf.mjs  renders /resume → public/resume.pdf (headless Chromium)
 ```
 
 ## Development
 
 ```bash
 npm install
+npx playwright install chromium   # one-time — renders the résumé PDF
 npm run dev        # http://localhost:3000
 ```
 
@@ -64,14 +69,14 @@ Pushes to `master` trigger the GitHub Actions workflow automatically.
 Manual deploy:
 
 ```bash
-npm run generate   # outputs to .output/public/
+npm run generate   # static site → .output/public/ (also writes public/resume.pdf)
 ```
 
 To enable GitHub Pages: **Settings → Pages → Source → GitHub Actions**.
 
 ## Updating content
 
-All text, projects, skills, and experience live in **`data/portfolio.ts`**. No component changes needed for content updates.
+All text, projects, skills, and experience live in **`data/portfolio.ts`**. No component changes needed for content updates — the `/resume` page and downloadable **`/resume.pdf`** both regenerate from the same data on every `npm run generate`.
 
 ## Features
 
@@ -82,3 +87,4 @@ All text, projects, skills, and experience live in **`data/portfolio.ts`**. No c
 - Scroll-reveal animations (respects `prefers-reduced-motion`)
 - SEO: Open Graph, Twitter cards, JSON-LD Person schema, sitemap, robots.txt
 - Self-hosted fonts — zero external requests at runtime
+- Auto-generated résumé: a `/resume` page **and** a real downloadable `/resume.pdf`, both built from `data/portfolio.ts`

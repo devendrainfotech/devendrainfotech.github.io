@@ -1,3 +1,22 @@
+export const profile = {
+  name: 'Devendra Yadav',
+  title: 'Senior Full-stack Engineer',
+  location: 'Ahmedabad, IN',
+  email: 'devendrainfotech@gmail.com',
+  availability: 'Open to opportunities',
+  // Short professional summary — assembled from the site's Hero + About copy.
+  summary: [
+    'Senior full-stack engineer with 9+ years shipping products in TypeScript across healthcare, fintech, cybersecurity, trading, and logistics.',
+    'I build and own every layer — from Terraform infrastructure to pixel-tuned UIs: Nuxt/Vue and React frontends, Node/NestJS services, SQL/NoSQL data, and cloud on AWS, Azure, and GCP.',
+  ],
+  links: [
+    { label: 'GitHub', handle: '@devendrainfotech', url: 'https://github.com/devendrainfotech' },
+    { label: 'LinkedIn', handle: '/in/devendrainfotech', url: 'https://www.linkedin.com/in/devendrainfotech/' },
+    { label: 'Medium', handle: '@devendrainfotech', url: 'https://medium.com/@devendrainfotech' },
+    { label: 'Website', handle: 'devendrainfotech.github.io', url: 'https://devendrainfotech.github.io' },
+  ],
+} as const
+
 export const skills = [
   { num: '/ 01', name: 'JavaScript & TypeScript', tools: 'ES2024 · TS strict · Zod · type-level patterns · template literal types', level: 5, label: 'Expert' },
   { num: '/ 02', name: 'Node.js & Backend', tools: 'Express · NestJS · Serverless · microservices · AWS Lambda · job queues', level: 5, label: 'Expert' },

@@ -227,6 +227,24 @@ footer {
     align-items: center;
 }
 
+.resume-link {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    padding: 7px 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: 99px;
+    color: var(--fg);
+    transition:
+        border-color 0.2s var(--ease),
+        color 0.2s var(--ease),
+        background 0.2s var(--ease);
+}
+.resume-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
 .theme-toggle {
     width: 44px;
     height: 24px;

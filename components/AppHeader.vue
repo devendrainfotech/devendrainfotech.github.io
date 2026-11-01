@@ -14,6 +14,7 @@
     </nav>
 
     <div class="nav-right">
+      <NuxtLink to="/resume" class="resume-link">Résumé</NuxtLink>
       <span class="mono" aria-label="Local time">{{ time }}</span>
       <button
         class="theme-toggle"
