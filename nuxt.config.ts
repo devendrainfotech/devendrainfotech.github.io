@@ -26,10 +26,6 @@ export default defineNuxtConfig({
     name: 'Devendra Yadav — Senior Full-stack Engineer',
   },
 
-  sitemap: {
-    hostname: 'https://devendrainfotech.github.io',
-  },
-
   css: ['~/assets/css/main.css'],
 
   app: {
@@ -60,7 +56,9 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    // Don't extract payload for purely static site — saves a fetch
+    // Purely static site: skip payload extraction and the app manifest.
+    // Removes an extra client fetch and the dev "#app-manifest" resolve warning.
     payloadExtraction: false,
+    appManifest: false,
   },
 })
