@@ -6,8 +6,8 @@ export const profile = {
   availability: 'Open to opportunities',
   // Short professional summary — assembled from the site's Hero + About copy.
   summary: [
-    'Senior full-stack engineer with 9+ years shipping products in TypeScript across healthcare, fintech, cybersecurity, trading, and logistics.',
-    'I build and own every layer — from Terraform infrastructure to pixel-tuned UIs: Nuxt/Vue and React frontends, Node/NestJS services, SQL/NoSQL data, and cloud on AWS, Azure, and GCP.',
+    'Senior full-stack engineer with 9+ years shipping production systems in TypeScript across healthcare, fintech, cybersecurity, trading, and logistics — now building AI product infrastructure, including a multi-cloud healthcare copilot.',
+    'I build and own every layer — from Terraform IaC across AWS, Azure, and GCP to pixel-tuned UIs: Nuxt/Vue and React frontends, Node/NestJS services, and real-time data pipelines.',
   ],
   links: [
     { label: 'GitHub', handle: '@devendrainfotech', url: 'https://github.com/devendrainfotech' },
@@ -20,7 +20,7 @@ export const profile = {
 export const skills = [
   { num: '/ 01', name: 'JavaScript & TypeScript', tools: 'ES2024 · TS strict · Zod · type-level patterns · template literal types', level: 5, label: 'Expert' },
   { num: '/ 02', name: 'Node.js & Backend', tools: 'Express · NestJS · Serverless · microservices · AWS Lambda · job queues', level: 5, label: 'Expert' },
-  { num: '/ 03', name: 'Vue / Nuxt & React', tools: 'Nuxt 4 · Vue 3 · Pinia · React · Next.js · Angular · Redux · RxJS', level: 5, label: 'Expert' },
+  { num: '/ 03', name: 'Vue / Nuxt & React', tools: 'Nuxt 4 · Vue 3 · Pinia · React · Next.js · Angular · Redux · RxJS', level: 4, label: 'Advanced' },
   { num: '/ 04', name: 'Databases', tools: 'Postgres · MySQL · MSSQL · MongoDB · DynamoDB · Redis · Elastic Search', level: 5, label: 'Expert' },
   { num: '/ 05', name: 'Cloud & Infrastructure', tools: 'AWS · Azure · GCP · Terraform · Elastic Beanstalk · Docker · CI/CD', level: 5, label: 'Expert' },
   { num: '/ 06', name: 'Data Pipelines', tools: 'Debezium · Amazon MSK · Kafka · CDC · Lambda consumers · MSSQL → Postgres', level: 4, label: 'Advanced' },
@@ -32,7 +32,7 @@ export const projects = [
   {
     num: '/ 01',
     title: 'CooperSurgical Fertility Brands',
-    desc: 'Lead Nuxt 4 engineer for three CooperSurgical fertility brands — California Cryobank (sperm bank), Donor Egg Bank, and NW Cryobank — running on AWS Elastic Beanstalk across 11 US donation locations.',
+    desc: 'Lead Nuxt 4 engineer for three CooperSurgical fertility brands — California Cryobank (sperm bank), Donor Egg Bank, and NW Cryobank — across 11 US donation locations. Built on AWS Elastic Beanstalk; sites score 90+ Lighthouse performance and load noticeably faster than the legacy builds.',
     year: '2024',
     href: 'https://spermbank.com',
     preview: 'COOPERSURGICAL',
@@ -40,7 +40,7 @@ export const projects = [
   {
     num: '/ 02',
     title: 'Panopto Stream — CDC Pipeline',
-    desc: 'Real-time data pipeline for Panopto\'s enterprise video platform (1,500+ universities). MSSQL → Debezium → Amazon MSK → AWS Lambda → Postgres enabling live data sync at scale.',
+    desc: 'Near-real-time CDC pipeline for Panopto\'s enterprise video platform (1,500+ universities). MSSQL → Debezium → Amazon MSK → AWS Lambda → Postgres mirrors dozens of tables with seconds-to-minute end-to-end lag.',
     year: '2024',
     href: 'https://www.panopto.com',
     preview: 'PANOPTO STREAM',
@@ -48,7 +48,7 @@ export const projects = [
   {
     num: '/ 03',
     title: 'MyOneLine Health — Cloud Infra',
-    desc: 'Designed Terraform-managed infrastructure across Azure and GCP for an AI physician copilot platform — full IaC from networking to managed services across 3 environments.',
+    desc: 'Sole infrastructure owner for an AI physician copilot — 15+ Terraform modules provisioning AKS/GKE, managed databases, secrets, and networking/storage/CDN across Azure and GCP, with dev/staging/prod parity. Multi-cloud for client vendor-neutrality.',
     year: '2024',
     href: 'https://www.myonelinehealth.com',
     preview: 'MYONELINE',
@@ -56,7 +56,7 @@ export const projects = [
   {
     num: '/ 04',
     title: 'Ragnar — Full Platform Build',
-    desc: 'Architected and built the complete platform for America\'s largest relay race network (750k+ runners) — 8 Angular sites, registration hub, CMS, ML face-recognition photo platform, and serverless microservices.',
+    desc: 'Architected the complete platform for America\'s largest relay race network (750k+ runners) — 8 Angular sites, registration hub, CMS, ML face-recognition photos, and serverless microservices that absorbed tens of thousands of req/s at race-day peaks. Migrated hundreds of thousands of records off legacy PHP.',
     year: '2021',
     href: 'https://runragnar.com',
     preview: 'RAGNAR',
@@ -64,7 +64,7 @@ export const projects = [
   {
     num: '/ 05',
     title: 'SIRP — Security Orchestration',
-    desc: 'Architected the Playbook Editor for SIRP\'s AI-native SOC platform — a graph-based, no-code workflow builder that\'s the core surface security teams use to automate threat response.',
+    desc: 'Architected the Playbook Editor for SIRP\'s AI-native SOC platform — a graph-based, no-code workflow builder at the core of the product (SIRP reports 80% lower MTTD and 70% faster MTTR).',
     year: '2022',
     href: 'https://www.sirp.io',
     preview: 'SIRP',
@@ -72,7 +72,7 @@ export const projects = [
   {
     num: '/ 06',
     title: 'Doxo — Billing Automation',
-    desc: 'Solo-built a billing automation system processing 130 req/s — integrating Chargify, Salesforce, and Iterable to eliminate manual ops across Doxo\'s 120,000+ biller network.',
+    desc: 'Solo-built a billing automation system sustaining 130 req/s — integrating Chargify, Salesforce, Chargeback, and Iterable to eliminate nearly all manual billing and chargeback ops across Doxo\'s 120,000+ biller network.',
     year: '2022',
     href: 'https://www.doxo.com',
     preview: 'DOXO',
@@ -88,28 +88,28 @@ export const experience = [
     current: true,
   },
   {
-    when: '2022 — Jun 2024',
+    when: 'Jan 2023 — Jun 2024',
     role: 'Full-stack Engineer',
     company: 'Benchmark Estimating · Remote',
     desc: 'Full-stack development on a cloud-based cost and carbon estimating SaaS for infrastructure projects across Australia, UK, and New Zealand. Polyglot codebase: Node.js, C#, Python, React, MSSQL.',
     current: false,
   },
   {
-    when: 'Oct 2021 — 2022',
+    when: 'Oct 2021 — Dec 2022',
     role: 'Team Lead',
     company: 'Kavobits · Ahmedabad',
     desc: 'Led engineering across medical, trading, and SaaS automation projects. Integrated ChartIQ for OptionsPlay, built Doxo\'s 130 req/s automation layer solo, and drove CI/CD adoption across the team.',
     current: false,
   },
   {
-    when: 'Jan 2018 — Sep 2021',
+    when: 'Jan 2019 — Sep 2021',
     role: 'Sr. Software Engineer',
     company: 'ToxCore Solutions · Ahmedabad',
     desc: 'Owned the entire Ragnar ecosystem — 10+ projects for America\'s largest relay race network. Led a 5-person team, introduced NestJS to replace legacy PHP, and built everything from Angular frontends to serverless microservices.',
     current: false,
   },
   {
-    when: 'Apr 2016 — Dec 2018',
+    when: 'Jan 2017 — Dec 2018',
     role: 'Jr. Software Engineer',
     company: 'Logilite Technologies · Ahmedabad',
     desc: 'First engineering role. Built a hybrid mobile Driver App (Ionic/Cordova) with real-time GPS tracking and a Node.js stream-processing dashboard visualising live delivery routes with D3.js.',
@@ -123,14 +123,14 @@ export const writing = [
     readTime: '5 min',
     title: 'Getting Started with Node.js and ChatGPT',
     excerpt: 'How to integrate OpenAI\'s ChatGPT API into a Node.js project — practical setup, prompt engineering basics, and real use cases for AI-powered backends.',
-    href: 'https://medium.com/@devendrainfotech',
+    href: 'https://medium.com/@devendrainfotech/getting-started-with-node-js-and-chatgpt-unleashing-the-power-of-ai-in-your-next-project-15dffd1425fb',
   },
   {
     date: 'Feb 2023',
     readTime: '6 min',
     title: 'Unleashing the Power of EDI with Node.js',
     excerpt: 'A practical guide to Electronic Data Interchange with Node.js — streamlining B2B data exchange and automating business processes with standardised EDI formats.',
-    href: 'https://medium.com/@devendrainfotech',
+    href: 'https://medium.com/@devendrainfotech/unleashing-the-power-of-edi-with-node-js-streamlining-business-processes-with-ease-964ce89c73a3',
   },
 ] as const
 
@@ -156,6 +156,9 @@ export const testimonials = [
 ] as const
 
 export const awards = [
+  { year: '2026', title: 'AWS Certified AI Practitioner — in progress', org: 'Amazon Web Services', tag: 'Certification' },
+  { year: '2026', title: 'Generative AI with LLMs', org: 'DeepLearning.AI × AWS', tag: 'Certification' },
+  { year: '2026', title: 'DeepLearning.AI — GenAI / LLM coursework', org: 'DeepLearning.AI', tag: 'Coursework' },
   { year: '2025', title: 'AWS Certified Developer – Associate', org: 'Amazon Web Services', tag: 'Certification' },
   { year: '2021', title: 'Excellence Team Player', org: 'ToxCore Solutions', tag: 'Award' },
   { year: '2021', title: '3+ Years Long-Service Recognition', org: 'ToxCore Solutions', tag: 'Award' },

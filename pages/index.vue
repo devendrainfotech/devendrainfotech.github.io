@@ -26,10 +26,10 @@
 useSeoMeta({
   title: 'Devendra Yadav — Senior Full-stack Engineer',
   description:
-    'Senior full-stack engineer based in Ahmedabad. 9+ years shipping TypeScript, Nuxt, Node/NestJS, and Terraform across healthcare, fintech, cybersecurity, and logistics.',
+    'Senior full-stack engineer based in Ahmedabad. 9+ years shipping TypeScript, Nuxt, Node/NestJS, and Terraform across healthcare, fintech, and cybersecurity — now building AI product infrastructure on multi-cloud.',
   ogTitle: 'Devendra Yadav — Senior Full-stack Engineer',
   ogDescription:
-    'Senior full-stack engineer based in Ahmedabad. Nuxt · NestJS · Terraform across AWS, Azure, and GCP. Currently shipping for CooperSurgical and Panopto.',
+    'Senior full-stack engineer. Nuxt · NestJS · Terraform across AWS, Azure, GCP. Building AI product infra for a healthcare copilot; shipping for CooperSurgical and Panopto.',
   ogType: 'website',
   ogUrl: 'https://devendrainfotech.github.io',
   ogImage: 'https://devendrainfotech.github.io/og-image.png',
@@ -57,7 +57,7 @@ useHead({
         email: 'devendrainfotech@gmail.com',
         jobTitle: 'Senior Full-stack Engineer',
         description:
-          'Senior full-stack engineer with 9+ years experience shipping TypeScript, Nuxt, Node/NestJS, and Terraform across healthcare, fintech, cybersecurity, and logistics.',
+          'Senior full-stack engineer with 9+ years shipping TypeScript, Nuxt, Node/NestJS, and Terraform across healthcare, fintech, cybersecurity, and logistics — now building AI product infrastructure on multi-cloud.',
         address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressCountry: 'IN' },
         sameAs: [
           'https://github.com/devendrainfotech',
@@ -71,6 +71,7 @@ useHead({
           'AWS', 'Azure', 'GCP', 'Terraform', 'Elastic Beanstalk', 'AWS Lambda', 'Serverless',
           'Debezium', 'Amazon MSK', 'Kafka', 'CDC',
           'GraphQL', 'REST APIs', 'Docker', 'CI/CD',
+          'Generative AI', 'LLMs', 'RAG', 'AI Engineering',
         ],
       }),
     },

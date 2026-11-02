@@ -46,10 +46,12 @@
 <script setup lang="ts">
 const stats = [
   { label: 'Years shipping', value: '09+' },
+  { label: 'Industries', value: '5' },
   { label: 'Production projects', value: '20+' },
+  { label: 'Clouds', value: 'AWS · Azure · GCP' },
+  { label: 'Peak race-day load', value: '10K+ req/s' },
+  { label: 'Users reached', value: '750K+' },
   { label: 'Primary language', value: 'TypeScript' },
-  { label: 'Current stack', value: 'Nuxt 4 · AWS' },
   { label: 'AWS Certified', value: 'Developer Assoc.' },
-  { label: 'Based in', value: 'Ahmedabad, IN' },
 ]
 </script>

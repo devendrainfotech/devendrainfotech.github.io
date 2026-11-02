@@ -48,7 +48,7 @@
       </div>
       <div class="col reveal">
         <span class="mono">02 — Currently</span>
-        <p>Senior engineer at Basis Worldwide — shipping Nuxt 4 frontends for CooperSurgical and building real-time data pipelines on AWS.</p>
+        <p>Senior engineer at Basis Worldwide — shipping Nuxt 4 for CooperSurgical, standing up multi-cloud Terraform for an AI healthcare copilot, and building real-time data pipelines.</p>
       </div>
       <div class="col reveal col--right">
         <span class="mono">Scroll</span>
